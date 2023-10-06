@@ -2,14 +2,14 @@
 
 import { Download } from "lucide-react"
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, spring } from "framer-motion";
 import Link from "next/link";
 
 import { useSectionInView } from "@/hooks/use-section-in-view";
 import SocialMediaSide from "./social-media-side";
 import selfLogo from "@/public/self-logo.png";
 
-const avatarAnimation = {
+const avatarAnimationVariants = {
     initial: {
         opacity: 0,
         scale: 0,
@@ -24,6 +24,22 @@ const avatarAnimation = {
     },
 };
 
+const textAnimationVariants = {
+    initial: {
+        opacity: 0,
+        y: 100,
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.4,
+            spring
+        },
+    },
+};
+
+
 function Hero() {
     const { ref } = useSectionInView("Home");
 
@@ -34,24 +50,28 @@ function Hero() {
             className="relative h-screen w-full bg-white p-24 flex items-center justify-center gap-10"
         >
             <div className="flex flex-col gap-2 items-center">
-                <h1 className="font-bold text-5xl text-indigo-400">Hello, I'm Trang</h1>
-                <p className="text-xl">I'm a Fullstack Software Developer</p>
                 <motion.div
-                    className="flex  items-center"
-                    whileHover={{
-                        scale: 1.2,
-                        transition: { duration: 0.1 },
-                    }}>
-                    <Link href="/CV.pdf" className="flex gap-1 text-indigo-400">
+                    variants={textAnimationVariants}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{
+                        once: true,
+                    }}
+                >
+                    <h1 className="font-bold text-5xl text-indigo-400">Hello, I'm Trang</h1>
+                    <p className="text-xl">I'm a Fullstack Software Developer</p>
+                    <Link href="/CV.pdf" className="flex gap-1 text-indigo-400 hover:scale-125 transition scale justify-center">
                         <Download size={20} />
                         Download My CV
                     </Link>
                 </motion.div>
+
                 <SocialMediaSide />
             </div>
+
             <motion.div
                 className="font-bold"
-                variants={avatarAnimation}
+                variants={avatarAnimationVariants}
                 initial="initial"
                 whileInView="animate"
                 viewport={{

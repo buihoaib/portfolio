@@ -4,15 +4,40 @@ import toast from "react-hot-toast";
 import { useSectionInView } from "@/hooks/use-section-in-view";
 import SubmitButton from "./submit-button";
 import { sendEmail } from "@/actions/sendEmail";
+import { motion } from "framer-motion";
+
+const fadeInAnimationVariants = {
+    initial: {
+        opacity: 0,
+        y: 100,
+    },
+    animate: (index: number) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.02 * index,
+        },
+    }),
+    hover: {
+        scale: 1.2,
+        transition: { duration: 0.2 },
+    }
+};
 
 function Contact() {
     const { ref } = useSectionInView("Contact");
 
     return (
-        <section
+        <motion.section
             id="contact"
             ref={ref}
             className="h-full w-full bg-indigo-50 px-10 py-20 flex flex-col items-center"
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+                once: true,
+            }}
         >
             <h1 className="text-3xl uppercase font-bold pb-4 border-indigo-400 border-b-4">Contacts</h1>
             <div className="mt-4 px-20 text-center">
@@ -50,7 +75,7 @@ function Contact() {
                 />
                 <SubmitButton />
             </form>
-        </section>
+        </motion.section>
     )
 }
 
