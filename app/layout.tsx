@@ -7,6 +7,7 @@ import ActiveSectionContextProvider from '@/context/active-section-context'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
 import Logo from '@/components/logo'
+import { Toaster } from 'react-hot-toast'
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -31,6 +32,7 @@ export default function RootLayout({
           <Logo />
           {children}
           <Footer />
+          <Toaster />
         </ActiveSectionContextProvider>
       </body>
     </html>
