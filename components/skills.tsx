@@ -69,7 +69,7 @@ function Skills() {
                 </div>
 
                 <div className="flex flex-col items-center py-5 px-20 gap-2">
-                    <p>I'm currently learning: </p>
+                    <p>I&apos;m currently learning: </p>
                     <ul className="flex gap-2 flex-wrap items-center justify-center">
                         {learningSkills.map((skill, index) => (
                             <motion.li

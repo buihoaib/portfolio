@@ -58,8 +58,8 @@ function Hero() {
                         once: true,
                     }}
                 >
-                    <h1 className="font-bold text-5xl text-indigo-400">Hello, I'm Trang</h1>
-                    <p className="text-xl">I'm a Fullstack Software Developer</p>
+                    <h1 className="font-bold text-5xl text-indigo-400">Hello, I&apos;m Trang</h1>
+                    <p className="text-xl">I&apos;m a Fullstack Software Developer</p>
                     <Link href="/CV.pdf" className="flex gap-1 text-indigo-400 hover:scale-125 transition scale justify-center">
                         <Download size={20} />
                         Download My CV
