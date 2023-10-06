@@ -8,7 +8,7 @@ import { links } from "@/libs/data";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 function Navbar() {
-    const { activeSection, setActiveSection } = useActiveSectionContext();
+    const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
     return (
         <header
@@ -38,6 +38,7 @@ function Navbar() {
                                 href={link.hash}
                                 onClick={() => {
                                     setActiveSection(link.name);
+                                    setTimeOfLastClick(Date.now());
                                 }}
                             >
                                 {link.name}
