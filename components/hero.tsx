@@ -3,10 +3,26 @@
 import { Download } from "lucide-react"
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import { useSectionInView } from "@/hooks/use-section-in-view";
 import SocialMediaSide from "./social-media-side";
-import Link from "next/link";
+import selfLogo from "@/public/self-logo.png";
+
+const avatarAnimation = {
+    initial: {
+        opacity: 0,
+        scale: 0,
+    },
+    animate: {
+        opacity: 1,
+        scale: 1,
+        rotateY: 360,
+        transition: {
+            duration: 0.6,
+        },
+    },
+};
 
 function Hero() {
     const { ref } = useSectionInView("Home");
@@ -15,10 +31,10 @@ function Hero() {
         <section
             id="home"
             ref={ref}
-            className="relative h-screen w-full bg-indigo-400 p-24 flex items-center justify-center gap-10"
+            className="relative h-screen w-full bg-white p-24 flex items-center justify-center gap-10"
         >
             <div className="flex flex-col gap-2 items-center">
-                <h1 className="font-bold text-5xl">Hello, I'm Trang</h1>
+                <h1 className="font-bold text-5xl text-indigo-400">Hello, I'm Trang</h1>
                 <p className="text-xl">I'm a Fullstack Software Developer</p>
                 <motion.div
                     className="flex  items-center"
@@ -33,10 +49,17 @@ function Hero() {
                 </motion.div>
                 <SocialMediaSide />
             </div>
-            <div className="font-bold p-10 border-2">
-                <h1>avatar</h1>
-                {/* <Image src={} /> */}
-            </div>
+            <motion.div
+                className="font-bold"
+                variants={avatarAnimation}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
+                    once: true,
+                }}
+            >
+                <Image src={selfLogo} alt="self logo" />
+            </motion.div>
         </section>
     )
 }
