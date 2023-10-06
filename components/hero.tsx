@@ -2,6 +2,7 @@
 
 import { Download } from "lucide-react"
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import { useSectionInView } from "@/hooks/use-section-in-view";
 import SocialMediaSide from "./social-media-side";
@@ -19,12 +20,17 @@ function Hero() {
             <div className="flex flex-col gap-2 items-center">
                 <h1 className="font-bold text-5xl">Hello, I'm Trang</h1>
                 <p className="text-xl">I'm a Fullstack Software Developer</p>
-                <div className="flex  items-center">
+                <motion.div
+                    className="flex  items-center"
+                    whileHover={{
+                        scale: 1.2,
+                        transition: { duration: 0.1 },
+                    }}>
                     <Link href="/CV.pdf" className="flex gap-1 text-white">
                         <Download size={20} />
                         Download My CV
                     </Link>
-                </div>
+                </motion.div>
                 <SocialMediaSide />
             </div>
             <div className="font-bold p-10 border-2">
