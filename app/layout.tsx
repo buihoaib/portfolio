@@ -22,6 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
+      <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+      </head>
       <body className={cn(raleway.className, "relative")}>
         <ActiveSectionContextProvider>
           <Navbar />
