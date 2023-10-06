@@ -1,5 +1,6 @@
 import shopcoAdminImg from "@/public/shopco-admin.png";
 import shopcoStoreImg from "@/public/shopco-store.png";
+import portfolioImg from "@/public/portfolio-web.png";
 import prismaImg from "@/public/prisma.svg";
 import framerMotionImg from "@/public/framer-motion.svg";
 import stripeImg from "@/public/stripe.svg";
@@ -194,5 +195,35 @@ export const projectsData = [
         imageUrl: shopcoAdminImg,
         liveUrl: "https://shopco-admin.vercel.app/",
         repo: "https://github.com/buihoaib/shopco-admin",
+    },
+    {
+        title: "Personal Portfolio",
+        description:
+            "A content management system (CMS) for SHOP.CO. It manages the products, categories, and orders, as well as provides a general sales analytics for SHOP.CO.",
+        tags: [
+            {
+                title: "React",
+                type: "icon",
+                classnameOrUrl: "devicon-react-plain"
+            },
+            {
+                title: "Next.js",
+                type: "icon",
+                classnameOrUrl: "devicon-nextjs-plain"
+            },
+            {
+                title: "Tailwind",
+                type: "icon",
+                classnameOrUrl: "devicon-tailwindcss-plain"
+            },
+            {
+                title: "Framer Motion",
+                type: "img",
+                classnameOrUrl: framerMotionImg
+            },
+        ],
+        imageUrl: portfolioImg,
+        liveUrl: "https://portfolio.vercel.app/",
+        repo: "https://github.com/buihoaib/portfolio",
     },
 ] as const;
