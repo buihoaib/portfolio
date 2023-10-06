@@ -223,7 +223,7 @@ export const projectsData = [
             },
         ],
         imageUrl: portfolioImg,
-        liveUrl: "https://portfolio.vercel.app/",
+        liveUrl: "https://portfolio-buihoaib.vercel.app/",
         repo: "https://github.com/buihoaib/portfolio",
     },
 ] as const;
