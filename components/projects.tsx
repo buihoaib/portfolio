@@ -76,13 +76,13 @@ function Projects() {
                             <div className="flex mt-4 gap-4">
                                 <Link
                                     href={project.liveUrl}
-                                    className="flex gap-1 text-white bg-indigo-400 py-2 px-4 rounded-lg hover:bg-white hover:text-indigo-400"
+                                    className="flex gap-1 text-white bg-indigo-400 py-2 px-4 rounded-lg hover:bg-white hover:text-indigo-400 transition-all"
                                 >
                                     View Live
                                 </Link>
                                 <Link
                                     href={project.repo}
-                                    className="flex gap-1 text-white bg-indigo-400 py-2 px-4 rounded-lg hover:bg-white hover:text-indigo-400"
+                                    className="flex gap-1 text-white bg-indigo-400 py-2 px-4 rounded-lg hover:bg-white hover:text-indigo-400 transition-all"
                                 >
                                     Github
                                 </Link>
