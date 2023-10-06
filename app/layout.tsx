@@ -2,6 +2,7 @@ import './globals.css'
 import { Raleway } from 'next/font/google'
 
 import { cn } from '@/libs/utils'
+import ActiveSectionContextProvider from '@/context/active-section-context'
 
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
@@ -20,12 +21,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body className={cn(raleway.className, "relative")}>
-        <Navbar />
-        <Logo />
-        {children}
-        <Footer />
+        <ActiveSectionContextProvider>
+          <Navbar />
+          <Logo />
+          {children}
+          <Footer />
+        </ActiveSectionContextProvider>
       </body>
     </html>
   )

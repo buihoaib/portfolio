@@ -3,47 +3,48 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+import { cn } from "@/libs/utils";
 import { links } from "@/libs/data";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 function Navbar() {
+    const { activeSection, setActiveSection } = useActiveSectionContext();
+
     return (
         <header
             className="z-[10] relative"
         >
-            <motion.div
-                className="fixed top-5 left-1/2 h-[3.25rem] w-[36rem] rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]"
+            <motion.nav
+                className="fixed left-1/2 top-4 h-[2.6rem] w-[27rem] rounded-full border-opacity-40 bg-indigo-400"
                 initial={{ y: -100, x: "-50%", opacity: 0 }}
                 animate={{ y: 0, x: "-50%", opacity: 1 }}
-            ></motion.div>
-
-            <nav className="flex fixed top-[2.3rem] left-1/2 h-[initial] -translate-x-1/2 py-0">
-                <ul className="flex w-[22rem] flex-nowrap gap-16 items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500">
+            >
+                <ul className="flex flex-row gap-10 items-center justify-center h-[2.6rem]">
                     {links.map((link) => (
                         <motion.li
-                            className="h-3/4 flex items-center justify-center relative"
+                            className="flex items-center justify-center relative"
                             key={link.hash}
                             initial={{ y: -100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                         >
                             <Link
-                                // className={clsx(
-                                //     "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
-                                //     {
-                                //         "text-gray-950 dark:text-gray-200":
-                                //             activeSection === link.name,
-                                //     }
-                                // )}
+                                className={cn(
+                                    "flex w-full items-center justify-center px-3 py-1 text-white transition",
+                                    {
+                                        "text-black":
+                                            activeSection === link.name,
+                                    }
+                                )}
                                 href={link.hash}
                                 onClick={() => {
-                                    //setActiveSection(link.name);
-                                    //setTimeOfLastClick(Date.now());
+                                    setActiveSection(link.name);
                                 }}
                             >
                                 {link.name}
 
-                                {/* {link.name === activeSection && (
+                                {link.name === activeSection && (
                                     <motion.span
-                                        className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                                        className="bg-indigo-50 absolute rounded-full inset-0 -z-10"
                                         layoutId="activeSection"
                                         transition={{
                                             type: "spring",
@@ -51,12 +52,12 @@ function Navbar() {
                                             damping: 30,
                                         }}
                                     ></motion.span>
-                                )} */}
+                                )}
                             </Link>
                         </motion.li>
                     ))}
                 </ul>
-            </nav>
+            </motion.nav>
         </header>
     )
 }
