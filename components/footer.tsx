@@ -4,10 +4,10 @@ import SocialMediaFooter from "./social-media-footer"
 function Footer() {
     return (
         <div
-            className="flex flex-col border-t-2 items-center justify-center py-10 gap-4"
+            className="flex flex-col border-t-2 items-center justify-center py-10 gap-4 bg-indigo-400"
         >
             <SocialMediaFooter />
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center text-white">
                 <p>&copy; 2023 All rights reserved.</p>
                 <p className="flex justify-center items-center">
                     Developed with
