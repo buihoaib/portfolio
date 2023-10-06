@@ -91,6 +91,7 @@ function Projects() {
                             <ul className="flex gap-2 flex-wrap">
                                 {project.tags.map((tag, tagIndex) => (
                                     <motion.li
+                                        key={tagIndex}
                                         className="flex flex-col items-center justify-center px-4 py-2 rounded-xl text-indigo-400"
                                         variants={techIconsVariants}
                                         whileHover="hover"

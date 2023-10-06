@@ -41,6 +41,7 @@ function Skills() {
                     <ul className="flex gap-2 flex-wrap items-center justify-center">
                         {skillsData.map((skill, index) => (
                             <motion.li
+                                key={index}
                                 className="flex flex-col items-center px-4 py-2 rounded-xl text-indigo-400"
                                 variants={fadeInAnimationVariants}
                                 initial="initial"
@@ -52,7 +53,7 @@ function Skills() {
                                 custom={index}
                             >
                                 {skill.type === "icon" ?
-                                    < i className={cn(skill.classnameOrUrl, "text-5xl")} />
+                                    <i className={cn(skill.classnameOrUrl, "text-5xl")} />
                                     : <Image
                                         src={skill.classnameOrUrl}
                                         alt={skill.title}
@@ -72,6 +73,7 @@ function Skills() {
                     <ul className="flex gap-2 flex-wrap items-center justify-center">
                         {learningSkills.map((skill, index) => (
                             <motion.li
+                                key={index}
                                 className="flex flex-col items-center px-4 py-2 rounded-xl text-indigo-400 hover:bg"
                                 variants={fadeInAnimationVariants}
                                 initial="initial"
