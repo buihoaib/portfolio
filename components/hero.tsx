@@ -42,7 +42,7 @@ function Hero() {
                         scale: 1.2,
                         transition: { duration: 0.1 },
                     }}>
-                    <Link href="/CV.pdf" className="flex gap-1 text-white">
+                    <Link href="/CV.pdf" className="flex gap-1 text-indigo-400">
                         <Download size={20} />
                         Download My CV
                     </Link>
