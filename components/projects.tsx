@@ -5,7 +5,9 @@ import { useSectionInView } from "@/hooks/use-section-in-view";
 import { projectsData } from "@/libs/data";
 import { cn } from "@/libs/utils";
 import { motion } from "framer-motion";
+import { Radio } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const techIconsVariants = {
     initial: {
@@ -71,6 +73,20 @@ function Projects() {
                         >
                             <p className="text-2xl font-bold text-indigo-400">{project.title}</p>
                             <p>{project.description}</p>
+                            <div className="flex mt-4 gap-4">
+                                <Link
+                                    href={project.liveUrl}
+                                    className="flex gap-1 text-white bg-indigo-400 py-2 px-4 rounded-lg hover:bg-white hover:text-indigo-400"
+                                >
+                                    View Live
+                                </Link>
+                                <Link
+                                    href={project.repo}
+                                    className="flex gap-1 text-white bg-indigo-400 py-2 px-4 rounded-lg hover:bg-white hover:text-indigo-400"
+                                >
+                                    Github
+                                </Link>
+                            </div>
                             <p className="font-semibold pt-5 text-indigo-400">MADE WITH:</p>
                             <ul className="flex gap-2 flex-wrap">
                                 {project.tags.map((tag, tagIndex) => (

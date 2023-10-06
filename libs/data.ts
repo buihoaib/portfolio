@@ -76,8 +76,8 @@ export const skillsData = [
     },
     {
         title: "Microsoft SQL Server",
-        iconClatype: "icon",
-        classnameOrUrlssname: "devicon-microsoftsqlserver-plain"
+        type: "icon",
+        classnameOrUrl: "devicon-microsoftsqlserver-plain"
     },
     {
         title: "Express.js",
@@ -152,13 +152,14 @@ export const projectsData = [
             },
         ],
         imageUrl: shopcoStoreImg,
+        liveUrl: "https://shopco-store.vercel.app/",
+        repo: "https://github.com/buihoaib/shopco-store",
     },
     {
         title: "SHOP.CO Store",
         description:
             "A content management system (CMS) for SHOP.CO. It manages the products, categories, and orders, as well as provides a general sales analytics for SHOP.CO.",
         tags: [
-            //"React", "TypeScript", "Next.js", "MongoDB", "Tailwind", "Prisma", "Stripe"
             {
                 title: "React",
                 type: "icon",
@@ -191,5 +192,7 @@ export const projectsData = [
             },
         ],
         imageUrl: shopcoAdminImg,
+        liveUrl: "https://shopco-admin.vercel.app/",
+        repo: "https://github.com/buihoaib/shopco-admin",
     },
 ] as const;
