@@ -199,7 +199,7 @@ export const projectsData = [
     {
         title: "Personal Portfolio",
         description:
-            "A content management system (CMS) for SHOP.CO. It manages the products, categories, and orders, as well as provides a general sales analytics for SHOP.CO.",
+            "My personal portfolio, where I showcase my work as well as my learning journey. I'm updating its responsiness for smaller devices at the moment.",
         tags: [
             {
                 title: "React",
