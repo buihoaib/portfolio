@@ -199,7 +199,7 @@ export const projectsData = [
     {
         title: "Personal Portfolio",
         description:
-            "My personal portfolio, where I showcase my work as well as my learning journey. I'm updating its responsiness for smaller devices at the moment.",
+            "My personal portfolio, where I showcase my work as well as my learning journey.",
         tags: [
             {
                 title: "React",
