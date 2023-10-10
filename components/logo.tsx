@@ -1,12 +1,8 @@
 "use client";
 
 import { motion } from 'framer-motion'
-import { Dela_Gothic_One } from 'next/font/google'
-
-const gothic = Dela_Gothic_One({
-    weight: '400',
-    subsets: ['latin'],
-})
+import Image from "next/image";
+import TextLogo from "@/public/logo-chang.png";
 
 function Logo() {
     return (
@@ -20,11 +16,7 @@ function Logo() {
             }}
             viewport={{ once: true }}
         >
-            <p
-                className="font-bold text-xl text-indigo-400"
-            >
-                Trang Bui
-            </p>
+            <Image src={TextLogo} alt="text logo" className="w-[100px] lg:w-[160px]" />
         </motion.div>
     )
 }
