@@ -25,7 +25,11 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+
+        <link rel="shortcut icon" href="/app-icon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/app-icon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/app-icon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/app-icon/favicon-16x16.png" />
       </head>
       <body className={cn(raleway.className, "relative")}>
         <ActiveSectionContextProvider>
