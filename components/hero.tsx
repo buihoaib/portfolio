@@ -47,7 +47,7 @@ function Hero() {
         <section
             id="home"
             ref={ref}
-            className="relative h-screen w-full bg-white p-24 flex items-center justify-center gap-10"
+            className="relative h-screen w-full bg-white sm:p-24 flex flex-col sm:flex-row items-center justify-center gap-10"
         >
             <div className="flex flex-col gap-2 items-center">
                 <motion.div
@@ -70,7 +70,7 @@ function Hero() {
             </div>
 
             <motion.div
-                className="font-bold"
+                className="font-bold sm:max-w-[50%]"
                 variants={avatarAnimationVariants}
                 initial="initial"
                 whileInView="animate"
@@ -78,7 +78,7 @@ function Hero() {
                     once: true,
                 }}
             >
-                <Image src={selfLogo} alt="self logo" />
+                <Image src={selfLogo} alt="self logo" className="" />
             </motion.div>
         </section>
     )

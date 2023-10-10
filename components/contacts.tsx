@@ -15,7 +15,7 @@ const fadeInAnimationVariants = {
         opacity: 1,
         y: 0,
         transition: {
-            delay: 0.02 * index,
+            delay: 0.5 * index,
         },
     }),
     hover: {
@@ -40,7 +40,7 @@ function Contact() {
             }}
         >
             <h1 className="text-3xl uppercase font-bold pb-4 border-indigo-400 border-b-4">Contacts</h1>
-            <div className="mt-4 px-20 text-center">
+            <div className="mt-4 px-4 sm:px-20 text-center">
                 <p className="font-semibold text-xl">Hello there! Let&apos;s talk. </p>
                 <p>Feel free to send me an email through the form below. I will get back to you as soon as possible </p>
             </div>
