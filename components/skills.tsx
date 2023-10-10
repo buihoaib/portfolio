@@ -31,18 +31,18 @@ function Skills() {
         <section
             id="skills"
             ref={ref}
-            className="h-full w-full bg-indigo-50 px-[10rem] py-20 flex flex-col items-center"
+            className="h-full w-full bg-indigo-50 px-2 md:px-4 lg:px-10 py-20 flex flex-col items-center"
         >
             <h1 className="text-3xl uppercase font-bold pb-4 border-indigo-400 border-b-4">skills</h1>
 
             <div className="grid grid-row-2 gap-4 mt-10">
-                <div className="flex flex-col items-center py-5 px-20 gap-2">
+                <div className="flex flex-col items-center py-5 px-2 md:px-10 lg:px-20 gap-2">
                     <p>I love to work with: </p>
                     <ul className="flex gap-2 flex-wrap items-center justify-center">
                         {skillsData.map((skill, index) => (
                             <motion.li
                                 key={index}
-                                className="flex flex-col items-center px-4 py-2 rounded-xl text-indigo-400"
+                                className="flex flex-col items-center px-2 sm:px-4 py-2 rounded-xl text-indigo-400"
                                 variants={fadeInAnimationVariants}
                                 initial="initial"
                                 whileInView="animate"
@@ -95,6 +95,7 @@ function Skills() {
                                         height={40}
                                     />
                                 }
+                                <p className="text-sm">{skill.title}</p>
                             </motion.li>
                         ))}
                     </ul>
