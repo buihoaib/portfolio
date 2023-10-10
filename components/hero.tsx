@@ -47,9 +47,9 @@ function Hero() {
         <section
             id="home"
             ref={ref}
-            className="relative h-screen w-full bg-white sm:p-24 flex flex-col sm:flex-row items-center justify-center gap-10"
+            className="relative h-screen w-full bg-white sm:p-24 flex flex-col md:flex-row items-center justify-center gap-10"
         >
-            <div className="flex flex-col gap-2 items-center">
+            <div className="flex flex-col gap-2 items-center text-center">
                 <motion.div
                     variants={textAnimationVariants}
                     initial="initial"
@@ -58,7 +58,7 @@ function Hero() {
                         once: true,
                     }}
                 >
-                    <h1 className="font-bold text-5xl text-indigo-400">Hello, I&apos;m Trang</h1>
+                    <h1 className="font-bold text-4xl md:text-5xl text-indigo-400">Hello, I&apos;m Trang</h1>
                     <p className="text-xl">I&apos;m a Fullstack Software Developer</p>
                     <Link href="/CV.pdf" className="flex gap-1 text-indigo-400 hover:scale-125 transition scale justify-center">
                         <Download size={20} />
@@ -70,7 +70,7 @@ function Hero() {
             </div>
 
             <motion.div
-                className="font-bold sm:max-w-[50%]"
+                className="font-bold md:max-w-[50%]"
                 variants={avatarAnimationVariants}
                 initial="initial"
                 whileInView="animate"
@@ -78,7 +78,7 @@ function Hero() {
                     once: true,
                 }}
             >
-                <Image src={selfLogo} alt="self logo" className="" />
+                <Image src={selfLogo} alt="self logo" />
             </motion.div>
         </section>
     )
