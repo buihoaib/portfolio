@@ -11,7 +11,7 @@ const gothic = Dela_Gothic_One({
 function Logo() {
     return (
         <motion.div
-            className="absolute z-20 top-0 bg-transparent mt-8 ml-8"
+            className="absolute z-20 top-0 bg-transparent mt-4 ml-4 md:mt-8 md:ml-8"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
