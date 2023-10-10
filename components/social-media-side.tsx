@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 function SocialMediaSide() {
     return (
         <motion.div
-            className="absolute hidden left-0 top-2/5 rounded-r-xl pl-[60px] pr-3 py-5 sm:flex flex-col gap-4 bg-indigo-400"
+            className="absolute hidden left-0 sm:top-1/2 md:top-2/5 rounded-r-xl pl-[60px] pr-3 py-5 sm:flex flex-col gap-4 bg-indigo-400"
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: -50, opacity: 1 }}
         >
