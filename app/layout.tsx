@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
-        <link rel="icon" href="/self-logo.png" sizes="any" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={cn(raleway.className, "relative")}>
         <ActiveSectionContextProvider>
