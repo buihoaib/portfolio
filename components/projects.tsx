@@ -5,7 +5,6 @@ import { useSectionInView } from "@/hooks/use-section-in-view";
 import { projectsData } from "@/libs/data";
 import { cn } from "@/libs/utils";
 import { motion } from "framer-motion";
-import { Radio } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -34,13 +33,13 @@ function Projects() {
         <section
             id="projects"
             ref={ref}
-            className="h-full w-full bg-indigo-100 p-20 flex flex-col items-center"
+            className="h-full w-full bg-indigo-100 px-2 md:px-4 lg:px-10 py-20 flex flex-col items-center"
         >
             <h1 className="text-3xl uppercase font-bold pb-4 border-indigo-400 border-b-4">projects</h1>
-            <ul className="flex flex-col my-10">
+            <ul className="flex flex-col my-0 sm:my-4 md:my-10 items-center">
                 {projectsData.map((project, projectIndex) => (
                     <li
-                        className="grid grid-cols-2 items-center gap-[5rem] mx-20 py-16"
+                        className="grid grid-cols-1 md:grid-cols-2 items-center gap-[2rem] md:gap-[5rem] mx-4 md:mx-20 py-16"
                         key={projectIndex}
                     >
                         <motion.div
@@ -61,7 +60,7 @@ function Projects() {
                         </motion.div>
 
                         <motion.div
-                            className="col-span-1 flex flex-col gap-2"
+                            className="col-span-1 flex flex-col gap-2 items-center md:items-start text-center md:text-left"
                             initial={{ opacity: 0, scale: 0.5, x: 300 }}
                             whileInView={{ opacity: 1, scale: 1, x: 0 }}
                             transition={{
