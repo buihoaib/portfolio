@@ -43,7 +43,7 @@ function Projects() {
                         key={projectIndex}
                     >
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.5, x: -300 }}
+                            initial={{ opacity: 0, scale: 0.5, x: -100 }}
                             whileInView={{ opacity: 1, scale: 1, x: 0 }}
                             transition={{
                                 duration: 0.5,
@@ -61,7 +61,7 @@ function Projects() {
 
                         <motion.div
                             className="col-span-1 flex flex-col gap-2 items-center md:items-start text-center md:text-left"
-                            initial={{ opacity: 0, scale: 0.5, x: 300 }}
+                            initial={{ opacity: 0, scale: 0.5, x: 100 }}
                             whileInView={{ opacity: 1, scale: 1, x: 0 }}
                             transition={{
                                 duration: 0.5,
