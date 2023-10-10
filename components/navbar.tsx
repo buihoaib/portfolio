@@ -89,21 +89,15 @@ function Navbar() {
                                     key={link.hash}
                                     variants={liAnimationVariants}
                                     initial="initial"
-                                    whileInView="animate"
+                                    animate="animate"
                                     custom={index}
                                 >
                                     <Link
-                                        className={cn(
-                                            //"flex w-full items-center justify-center px-3 py-1 text-white transition",
-                                            // {
-                                            //     "text-black":
-                                            //         activeSection === link.name,
-                                            // }
-                                        )}
                                         href={link.hash}
                                         onClick={() => {
                                             setActiveSection(link.name);
                                             setTimeOfLastClick(Date.now());
+                                            setMenuOpened(false);
                                         }}
                                     >
                                         {link.name}
