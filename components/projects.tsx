@@ -27,7 +27,7 @@ const techIconsVariants = {
 };
 
 function Projects() {
-    const { ref } = useSectionInView("Projects");
+    const { ref } = useSectionInView("Projects", 0.4);
 
     return (
         <section
